@@ -16,3 +16,5 @@ The MIT License (MIT)
 
 Copyright (c) 2016 Katrina Owen, _@kytrinyx.com
 
+### Ceylon icon 
+The Ceylon icon is assumed to be owned by Red Hat, Inc. It appears to be released under the [Creative Commons Attribution Share-Alike 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). We have modified its colour scheme for use on Exercism.
