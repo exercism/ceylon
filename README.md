@@ -2,6 +2,8 @@
 
 Exercism problems in Ceylon.
 
+[![Build Status](https://travis-ci.org/exercism/xceylon.svg?branch=master)](https://travis-ci.org/exercism/xceylon)
+
 ## TODO
 
 _Document how to contribute to the Ceylon track._

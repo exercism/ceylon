@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]; then
+  echo "usage: $0 exercise-slug"
+  exit 1
+fi
+
+dir=$1
+exercise=$(basename $dir)
+backupext=testbak
+
+cd $dir
+
+for f in example/*; do
+  target="source/$exercise/$(basename $f)"
+  cp $target $target.$backupext
+  cp $f $target
+done
+
+ceylon test --compile=force $exercise
+status=$?
+
+for f in example/*; do
+  target="source/$exercise/$(basename $f)"
+  mv $target.$backupext $target
+done
+
+exit $status
