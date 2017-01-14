@@ -10,6 +10,14 @@
       "topics": [
         "Integers"
       ]
+    },
+    {
+      "slug": "anagram",
+      "difficulty": 4,
+      "topics": [
+        "Strings",
+        "Filtering"
+      ]
     }
   ],
   "deprecated": [
