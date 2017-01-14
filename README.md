@@ -59,6 +59,9 @@ This directory should contain the following files and directories, where `<slug>
   * Instead, it is used in our [Travis CI run](.travis.yml) to make sure that the exercise is solvable and that the tests make sense.
   * Other files may be included in the `example/` directory if appropriate.
 
+As a reminder, the README does not need to be added to this track - it is automatically created using the data in [x-common](https://github.com/exercism/x-common).
+However, if there is any Ceylon-specific information that you would like appended to the README, place this in a `HINTS.md` file in the exercise directory (`exercises/<slug>/HINTS.md`).
+
 ### Style and conventions
 
 Various choices were made in the past to get the repository to the state it is in now.
