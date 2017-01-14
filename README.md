@@ -62,6 +62,22 @@ This directory should contain the following files and directories, where `<slug>
 As a reminder, the README does not need to be added to this track - it is automatically created using the data in [x-common](https://github.com/exercism/x-common).
 However, if there is any Ceylon-specific information that you would like appended to the README, place this in a `HINTS.md` file in the exercise directory (`exercises/<slug>/HINTS.md`).
 
+### Running the tests
+
+As mentioned, [Travis CI](https://travis-ci.org/exercism/xceylon) runs our tests to ensure that our exercises are solvable.
+The tests are run on all pull requests (PRs), and we should strive to only merge PRs for which the tests are passing.
+
+It is possible to run these tests locally as well.
+In particular, the [`bin/test-exercise`](bin/test-exercise) will test just one exercise:
+
+```bash
+bin/test-exercise exercises/leap
+```
+
+This script automates the process of moving the example files in, running the tests, and then moving the example files back.
+This is useful when changing an exercise in this repository.
+The test can be run locally to make sure everything is working without having to wait for Travis CI.
+
 ### Style and conventions
 
 Various choices were made in the past to get the repository to the state it is in now.
