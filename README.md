@@ -94,6 +94,12 @@ For example, all indents are two spaces because that's the default in the mainta
 The maintainer is not intent on any particular style as long as all the code in the repository is consistent.
 If in the future there happened to be a widely-accepted style guide and/or an automatic formatter, the maintainer would not be opposed to reformatting all code in this repository to comply.
 
+#### Idiomatic Ceylon
+
+All example code should be idiomatic Ceylon, to set a good example for anyone who might look at this repository for solutions to the exercises.
+The current maintainer may have trouble with this point, since the current maintainer is only a Ceylon beginner and may not be familiar enough with the language to tell what is idiomatic or not.
+Help in this area is especially appreciated.
+
 #### Project structure
 
 The current maintainer finds it regrettable that the exercise slug must be repeated so many times: `exercises/<slug>/source/<slug>/<Slug>.ceylon`.
