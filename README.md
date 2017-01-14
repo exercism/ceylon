@@ -59,6 +59,65 @@ This directory should contain the following files and directories, where `<slug>
   * Instead, it is used in our [Travis CI run](.travis.yml) to make sure that the exercise is solvable and that the tests make sense.
   * Other files may be included in the `example/` directory if appropriate.
 
+### Style and conventions
+
+Various choices were made in the past to get the repository to the state it is in now.
+These choices aren't set in stone; they could be changed at a later date.
+But the rationale behind the current choices made will be noted here.
+
+#### Style
+
+At the time of writing, the current maintainer of the Ceylon track was not able to find any commonly-accepted style guide for Ceylon.
+Nor did the maintainer find automatic linter or formatter.
+Thus, the maintainer was forced to just figure one out and try to be consistent.
+For example, all indents are two spaces because that's the default in the maintainer's editor.
+
+The maintainer is not intent on any particular style as long as all the code in the repository is consistent.
+If in the future there happened to be a widely-accepted style guide and/or an automatic formatter, the maintainer would not be opposed to reformatting all code in this repository to comply.
+
+#### Project structure
+
+The current maintainer finds it regrettable that the exercise slug must be repeated so many times: `exercises/<slug>/source/<slug>/<Slug>.ceylon`.
+
+* `exercises/<slug>` is required by Exercism, otherwise the exercise cannot be served.
+* `source/<slug>` is because the exercise files are placed in a module with the same name as the exercise slug.
+  * It doesn't seem possible to run [`ceylon test`](https://ceylon-lang.org/documentation/reference/tool/ceylon/subcommands/ceylon-test.html) without a module, since that is one of the arguments it requires.
+  * They could all be named `main` or something similarly nondescript, but perhaps that would get confusing.
+* `<Slug>.ceylon` is not required for any particular reason.
+  * Then again, what else would it be named?
+  * Again, `Main.ceylon` seems a bit too confusion-prone.
+
+The current maintainer wishes there was less duplication, but does not really see a good way out.
+Any ideas here are welcome.
+
+#### Stubs
+
+We provide the stubs with signatures included because we felt it was not a sufficiently interesting learning experience to make students have to puzzle out the expected signatures by just looking at the tests.
+
+Because Ceylon is a statically-typed language, the entire test suite must type-check before it can be run at all.
+Thus, not providing the type signatures forces the students to figure out the types for all the functions being tested, rather than being able to focus on just one at a time.
+
+The Ceylon track is not the only track that had to make this decision.
+[Other tracks have discussed this as well](https://github.com/exercism/discussions/issues/114), and come to various conclusions.
+
+If students suggest that they would like to have the challenge of figuring out type signatures, we would gladly change our minds on this point.
+They might suggest this on the exercism.io site, or on this repository via issues.
+It's likely that the latter is more often monitored.
+
+#### Parameterized tests versus one test at a time
+
+As mentioned above, we used parameterized tests since this avoids test code duplication.
+
+Unfortunately, since by default all cases are enabled, this runs counter to the usual Exercism style in which only a *single test case* is enabled, and the student enables one more test case after making the previous one pass, taking an iterative process.
+
+The [ignore annotation](https://modules.ceylon-lang.org/repo/1/ceylon/test/1.3.1/module-doc/api/index.html#ignore) does not seem like it can be applied to individual cases of a parameterized test.
+
+One possible solution to this would be to comment out all cases except the first.
+If this solution were taken, students would need to be aware of this, and be informed that they need to uncomment the cases.
+The Travis CI run would need to uncomment the cases as well (without uncommenting any actual comments, which would probably cause syntax errors!).
+
+The current maintainer does not have a good solution to this, so ideas here are welcome.
+
 ## License
 
 The MIT License (MIT)
