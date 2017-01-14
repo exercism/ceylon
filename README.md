@@ -59,6 +59,25 @@ This directory should contain the following files and directories, where `<slug>
   * Instead, it is used in our [Travis CI run](.travis.yml) to make sure that the exercise is solvable and that the tests make sense.
   * Other files may be included in the `example/` directory if appropriate.
 
+As a reminder, the README does not need to be added to this track - it is automatically created using the data in [x-common](https://github.com/exercism/x-common).
+However, if there is any Ceylon-specific information that you would like appended to the README, place this in a `HINTS.md` file in the exercise directory (`exercises/<slug>/HINTS.md`).
+
+### Running the tests
+
+As mentioned, [Travis CI](https://travis-ci.org/exercism/xceylon) runs our tests to ensure that our exercises are solvable.
+The tests are run on all pull requests (PRs), and we should strive to only merge PRs for which the tests are passing.
+
+It is possible to run these tests locally as well.
+In particular, the [`bin/test-exercise`](bin/test-exercise) will test just one exercise:
+
+```bash
+bin/test-exercise exercises/leap
+```
+
+This script automates the process of moving the example files in, running the tests, and then moving the example files back.
+This is useful when changing an exercise in this repository.
+The test can be run locally to make sure everything is working without having to wait for Travis CI.
+
 ### Style and conventions
 
 Various choices were made in the past to get the repository to the state it is in now.
@@ -74,6 +93,12 @@ For example, all indents are two spaces because that's the default in the mainta
 
 The maintainer is not intent on any particular style as long as all the code in the repository is consistent.
 If in the future there happened to be a widely-accepted style guide and/or an automatic formatter, the maintainer would not be opposed to reformatting all code in this repository to comply.
+
+#### Idiomatic Ceylon
+
+All example code should be idiomatic Ceylon, to set a good example for anyone who might look at this repository for solutions to the exercises.
+The current maintainer may have trouble with this point, since the current maintainer is only a Ceylon beginner and may not be familiar enough with the language to tell what is idiomatic or not.
+Help in this area is especially appreciated.
 
 #### Project structure
 
