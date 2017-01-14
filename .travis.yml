@@ -1,5 +1,10 @@
 language: bash
 
-script:
+install:
   - bin/fetch-configlet
+  - curl -s https://get.sdkman.io | bash
+  - source $HOME/.sdkman/bin/sdkman-init.sh
+  - sdk install ceylon
+script:
   - bin/configlet .
+  - bin/test-all-exercises
