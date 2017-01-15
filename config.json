@@ -50,7 +50,6 @@
       "difficulty": 10,
       "topics": [
         "Reactive programming",
-        "Generics",
         "Classes",
         "Member classes",
         "Callable"
