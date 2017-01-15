@@ -42,9 +42,10 @@ Each exercise is located in the `exercises` directory, in a directory with the s
 This directory should contain the following files and directories, where `<slug>` is the slug of the exercise with all hyphens deleted, and `<Slug>` is the CamelCased version:
 
 * `source/<slug>/module.ceylon`: the [module descriptor](https://ceylon-lang.org/documentation/tour/modules/#dependencies_and_module_descriptors).
-  * This file will declare the module and any dependencies.
+  * This file declares the module and any dependencies.
   * Typically, the only dependency will be on [`ceylon.test`](https://herd.ceylon-lang.org/modules/ceylon.test) at the current Ceylon version.
-  * We don't expect to have other dependencies, but we may consider adding dependencies for an exercise if it would be unnecessarily difficult and/or cumbersome without those particular dependencies.
+  * We don't expect to declare any other dependencies in this module descriptor.
+  * The student is of course free to add any dependencies here if the student's individual submission requires them.
 * `source/<slug>/<Slug>.ceylon`: the stub solution.
   * This file provides just the type signatures needed to make the tests compile.
   * The implementations for all functions should all be `return nothing;`, which will intentionally fail the tests.
@@ -57,6 +58,11 @@ This directory should contain the following files and directories, where `<slug>
 * `example/<Slug>.ceylon`: An example solution that passes the tests.
   * This will not be served to students (all paths containing `example` are not served).
   * Instead, it is used in our [Travis CI run](.travis.yml) to make sure that the exercise is solvable and that the tests make sense.
+* *optional*: `example/module.ceylon`: The module descriptor for the example solution.
+  * This is necessary only if the example solution has dependencies other than `ceylon.test`.
+  * Wherever possible, the dependencies should be limited to modules under the `ceylon.*` namespace, to avoid burdening Travis CI with having to fetch many external dependencies.
+  * We may consider adding external dependencies for an example solution if the exercise would be unnecessarily difficult and/or cumbersome without those particular dependencies.
+* *optional*: `example/*.ceylon`
   * Other files may be included in the `example/` directory if appropriate.
 
 As a reminder, the README does not need to be added to this track - it is automatically created using the data in [x-common](https://github.com/exercism/x-common).
