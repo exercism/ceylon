@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-shared {[String, Boolean]*} cases =>
+{[String, Boolean]*} cases =>
   {
     // paired square brackets
     ["[]", true],
@@ -32,6 +32,6 @@ shared {[String, Boolean]*} cases =>
 
 test
 parameters(`value cases`)
-shared void testBalanced(String brackets, Boolean expected) {
+void testBalanced(String brackets, Boolean expected) {
   assertEquals(balanced(brackets), expected);
 }
