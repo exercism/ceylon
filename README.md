@@ -39,7 +39,7 @@ For the Ceylon track, the files needed to port an exercise are described in the 
 ### Exercise structure
 
 Each exercise is located in the `exercises` directory, in a directory with the same name as its slug (the `leap` exercise will be at `exercises/leap`, etc.).
-This directory should contain the following files and directories, where `<slug>` is the slug of the exercise, and `<Slug>` is the CamelCased version:
+This directory should contain the following files and directories, where `<slug>` is the slug of the exercise with all hyphens deleted, and `<Slug>` is the CamelCased version:
 
 * `source/<slug>/module.ceylon`: the [module descriptor](https://ceylon-lang.org/documentation/tour/modules/#dependencies_and_module_descriptors).
   * This file will declare the module and any dependencies.

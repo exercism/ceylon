@@ -18,6 +18,15 @@
         "Strings",
         "Filtering"
       ]
+    },
+    {
+      "slug": "bracket-push",
+      "difficulty": 6,
+      "topics": [
+        "Parsing",
+        "Stacks",
+        "Strings"
+      ]
     }
   ],
   "deprecated": [

@@ -7,21 +7,23 @@ fi
 
 dir=$1
 exercise=$(basename $dir)
+module=$(echo $exercise | tr -d -)
+sourcedir="source/$module"
 backupext=testbak
 
 cd $dir
 
 for f in example/*; do
-  target="source/$exercise/$(basename $f)"
+  target="$sourcedir/$(basename $f)"
   cp $target $target.$backupext
   cp $f $target
 done
 
-ceylon test --compile=force $exercise
+ceylon test --compile=force $module
 status=$?
 
 for f in example/*; do
-  target="source/$exercise/$(basename $f)"
+  target="$sourcedir/$(basename $f)"
   mv $target.$backupext $target
 done
 
