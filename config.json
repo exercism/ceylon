@@ -12,6 +12,14 @@
       ]
     },
     {
+      "slug": "sieve",
+      "difficulty": 3,
+      "topics": [
+        "Filtering",
+        "Mathematics"
+      ]
+    },
+    {
       "slug": "anagram",
       "difficulty": 4,
       "topics": [
