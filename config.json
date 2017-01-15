@@ -28,6 +28,15 @@
       ]
     },
     {
+      "slug": "largest-series-product",
+      "difficulty": 4,
+      "topics": [
+        "Strings",
+        "Integers",
+        "Transforming"
+      ]
+    },
+    {
       "slug": "bracket-push",
       "difficulty": 6,
       "topics": [
