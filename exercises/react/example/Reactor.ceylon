@@ -1,3 +1,5 @@
+import ceylon.collection { HashMap, MutableMap }
+
 alias Element => Integer;
 
 class Reactor() {
@@ -20,6 +22,7 @@ class Reactor() {
     assign currentValue {
       currentValue_ = currentValue;
       eachDependent((d) => d.propagate());
+      eachDependent((d) => d.fireCallbacks());
     }
   }
 
@@ -28,8 +31,27 @@ class Reactor() {
   }
 
   shared class ComputeCell(Element() newValue) extends Cell() {
+    shared alias Callback => Anything(Element);
+
     variable Element currentValue_ = newValue();
+    variable Element lastCallbackValue = currentValue_;
     shared actual Element currentValue => currentValue_;
+
+    variable Integer callbacksIssued = 0;
+    variable MutableMap<Integer, Callback> activeCallbacks = HashMap<Integer, Callback>();
+
+    shared interface Subscription {
+      shared formal void cancel();
+    }
+
+    shared Subscription addCallback(Callback f) {
+      value id = callbacksIssued;
+      callbacksIssued++;
+      activeCallbacks.put(id, f);
+      return object satisfies Subscription {
+        cancel() => activeCallbacks.remove(id);
+      };
+    }
 
     shared void propagate() {
       value nv = newValue();
@@ -37,6 +59,17 @@ class Reactor() {
         currentValue_ = nv;
         eachDependent((d) => d.propagate());
       }
+    }
+
+    shared void fireCallbacks() {
+      if (lastCallbackValue == currentValue) {
+        return;
+      }
+      lastCallbackValue = currentValue;
+      for (cb in activeCallbacks.items) {
+        cb(currentValue);
+      }
+      eachDependent((d) => d.fireCallbacks());
     }
   }
 
