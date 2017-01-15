@@ -1,8 +1,6 @@
 import ceylon.collection { HashMap, MutableMap }
 
-alias Element => Integer;
-
-class Reactor() {
+class Reactor<Element>() given Element satisfies Object {
   shared abstract class Cell() {
     shared formal Element currentValue;
     variable ComputeCell[] dependents = [];
@@ -54,7 +52,7 @@ class Reactor() {
     }
 
     shared void propagate() {
-      value nv = newValue();
+      Element nv = newValue();
       if (nv != currentValue) {
         currentValue_ = nv;
         eachDependent((d) => d.propagate());

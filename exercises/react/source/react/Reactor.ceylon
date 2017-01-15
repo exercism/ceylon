@@ -1,6 +1,4 @@
-alias Element => Integer;
-
-class Reactor() {
+class Reactor<Element>() given Element satisfies Object {
   shared abstract class Cell() {
     shared formal Element currentValue;
   }
