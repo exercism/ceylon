@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-shared {[String, {String*}, {String*}]*} cases =>
+{[String, {String*}, {String*}]*} cases =>
   {
     // no matches
     ["diaper", {"hello", "world", "zombies", "pants"}, {}],
@@ -42,6 +42,6 @@ shared {[String, {String*}, {String*}]*} cases =>
 
 test
 parameters(`value cases`)
-shared void testAnagram(String subject, {String*} candidates, {String*} expected) {
+void testAnagram(String subject, {String*} candidates, {String*} expected) {
   assertEquals(sort(anagrams(subject, candidates)), sort(expected));
 }
