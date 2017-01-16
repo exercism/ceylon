@@ -44,6 +44,17 @@
         "Stacks",
         "Strings"
       ]
+    },
+    {
+      "slug": "react",
+      "difficulty": 10,
+      "topics": [
+        "Reactive programming",
+        "Generics",
+        "Classes",
+        "Member classes",
+        "Callable"
+      ]
     }
   ],
   "deprecated": [
