@@ -159,3 +159,37 @@ void callbacksAreNotCalledIfDependenciesChangeButOutputValueDoesntChange() {
   }
   assertEquals(vals, []);
 }
+
+{[Boolean, Boolean, Boolean, Boolean, Boolean]*} adderCases => {
+  [false, false, false, false, false],
+  [false, false, true, false, true],
+  [false, true, false, false, true],
+  [false, true, true, true, false],
+  [true, false, false, false, true],
+  [true, false, true, true, false],
+  [true, true, false, true, false],
+  [true, true, true, true, true]
+};
+
+test
+parameters(`value adderCases`)
+// This is a digital logic circuit called an adder:
+// https://en.wikipedia.org/wiki/Adder_(electronics)
+void testAdder(Boolean aval, Boolean bval, Boolean cinval, Boolean expectCout, Boolean expectSum) {
+  value r = Reactor<Boolean>();
+  value a = r.InputCell(aval);
+  value b = r.InputCell(bval);
+  value carryIn = r.InputCell(cinval);
+
+  value aXorB = r.ComputeCell.double(a, b, (Boolean a, Boolean b) => a != b);
+  value sum = r.ComputeCell.double(aXorB, carryIn, (Boolean axorb, Boolean cin) => axorb != cin);
+
+  value aXorBAndCin = r.ComputeCell.double(aXorB, carryIn, (Boolean axorb, Boolean cin) => axorb && cin);
+  value aAndB = r.ComputeCell.double(a, b, (Boolean a, Boolean b) => a && b);
+  value carryOut = r.ComputeCell.double(aXorBAndCin, aAndB, (Boolean a, Boolean b) => a || b);
+
+  // Test them both at once so if they fail we get to see both values.
+  [Boolean, Boolean] expected = [expectSum, expectCout];
+  [Boolean, Boolean] observed = [sum.currentValue, carryOut.currentValue];
+  assertEquals(expected, observed);
+}
