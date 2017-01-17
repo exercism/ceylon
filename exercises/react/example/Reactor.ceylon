@@ -1,47 +1,55 @@
-class Reactor() {
-  shared alias Element => Integer;
+alias Element => Integer;
 
-  shared interface Cell {
+class Reactor() {
+  shared abstract class Cell() {
     shared formal Element currentValue;
-    shared formal Cell[] dependents;
-    shared formal void addDependent(Cell c);
+    variable ComputeCell[] dependents = [];
+    shared void addDependent(ComputeCell c) {
+      dependents = dependents.withTrailing(c);
+    }
+    shared void eachDependent(Anything(ComputeCell) f) {
+      for (dep in dependents) {
+        f(dep);
+      }
+    }
   }
 
-  shared class InputCell(Element initialValue) satisfies Cell {
+  shared class InputCell(Element initialValue) extends Cell() {
     variable Element currentValue_ = initialValue;
     shared actual Element currentValue => currentValue_;
     assign currentValue {
       currentValue_ = currentValue;
-    }
-
-    shared actual variable Cell[] dependents = [];
-    shared actual void addDependent(Cell c) {
-      dependents = dependents.withTrailing(c);
+      eachDependent((d) => d.propagate());
     }
   }
 
-  shared class ComputeCell satisfies Cell {
-    variable Element currentValue_;
-    Element() newValue;
+  shared InputCell newInputCell(Element initialValue) {
+    return InputCell(initialValue);
+  }
 
-    shared actual variable Cell[] dependents = [];
-    shared actual void addDependent(Cell c) {
-      dependents = dependents.withTrailing(c);
-    }
-
-    shared new single(Cell c, Element(Element) f) {
-      c.addDependent(this);
-      newValue = () => f(c.currentValue);
-      currentValue_ = newValue();
-    }
-
-    shared new double(Cell c1, Cell c2, Element(Element, Element) f) {
-      c1.addDependent(this);
-      c2.addDependent(this);
-      newValue = () => f(c1.currentValue, c2.currentValue);
-      currentValue_ = newValue();
-    }
-
+  shared class ComputeCell(Element() newValue) extends Cell() {
+    variable Element currentValue_ = newValue();
     shared actual Element currentValue => currentValue_;
+
+    shared void propagate() {
+      value nv = newValue();
+      if (nv != currentValue) {
+        currentValue_ = nv;
+        eachDependent((d) => d.propagate());
+      }
+    }
+  }
+
+  shared ComputeCell newComputeCell1(Cell c, Element(Element) f) {
+    value cell = ComputeCell(() => f(c.currentValue));
+    c.addDependent(cell);
+    return cell;
+  }
+
+  shared ComputeCell newComputeCell2(Cell c1, Cell c2, Element(Element, Element) f) {
+    value cell = ComputeCell(() => f(c1.currentValue, c2.currentValue));
+    c1.addDependent(cell);
+    c2.addDependent(cell);
+    return cell;
   }
 }
