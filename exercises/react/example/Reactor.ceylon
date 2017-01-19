@@ -24,10 +24,6 @@ class Reactor<Element>() given Element satisfies Object {
     }
   }
 
-  shared InputCell newInputCell(Element initialValue) {
-    return InputCell(initialValue);
-  }
-
   shared class ComputeCell(Element() newValue) extends Cell() {
     shared alias Callback => Anything(Element);
 

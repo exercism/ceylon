@@ -3,14 +3,14 @@ import ceylon.test { ... }
 test
 void inputCellsHaveValue() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(10);
+  value input = r.InputCell(10);
   assertEquals(input.currentValue, 10);
 }
 
 test
 void inputCellsCanHaveValuesSet() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(4);
+  value input = r.InputCell(4);
   input.currentValue = 20;
   assertEquals(input.currentValue, 20);
 }
@@ -18,7 +18,7 @@ void inputCellsCanHaveValuesSet() {
 test
 void computeCellsCalculateInitialValue() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value output = r.newComputeCell1(input, (x) => x + 1);
   assertEquals(output.currentValue, 2);
 }
@@ -26,8 +26,8 @@ void computeCellsCalculateInitialValue() {
 test
 void computeCellsTakeInputInRightOrder() {
   value r = Reactor<Integer>();
-  value one = r.newInputCell(1);
-  value two = r.newInputCell(2);
+  value one = r.InputCell(1);
+  value two = r.InputCell(2);
   value output = r.newComputeCell2(one, two, (x, y) => x + y * 10);
   assertEquals(output.currentValue, 21);
 }
@@ -35,7 +35,7 @@ void computeCellsTakeInputInRightOrder() {
 test
 void computeCellsUpdateValueWhenDependenciesChange() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value output = r.newComputeCell1(input, (x) => x + 1);
   input.currentValue = 3;
   assertEquals(output.currentValue, 4);
@@ -44,7 +44,7 @@ void computeCellsUpdateValueWhenDependenciesChange() {
 test
 void computeCellsCanDependOnOtherComputeCells() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value timesTwo = r.newComputeCell1(input, (x) => x * 2);
   value timesThirty = r.newComputeCell1(input, (x) => x * 30);
   value output = r.newComputeCell2(timesTwo, timesThirty, (x, y) => x + y);
@@ -57,7 +57,7 @@ void computeCellsCanDependOnOtherComputeCells() {
 test
 void computeCellsFireCallbacks() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value output = r.newComputeCell1(input, (x) => x + 1);
 
   variable Integer[] vals = [];
@@ -70,7 +70,7 @@ void computeCellsFireCallbacks() {
 test
 void callbacksOnlyFireOnChange() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value output = r.newComputeCell1(input, (x) => if (x < 3) then 111 else 222);
 
   variable Integer[] vals = [];
@@ -86,7 +86,7 @@ void callbacksOnlyFireOnChange() {
 test
 void callbacksCanBeAddedAndRemoved() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(11);
+  value input = r.InputCell(11);
   value output = r.newComputeCell1(input, (x) => x + 1);
 
   variable Integer[] vals1 = [];
@@ -110,7 +110,7 @@ void callbacksCanBeAddedAndRemoved() {
 test
 void removingCallbackMultipleTimesDoesntInterfereWithOtherCallbacks() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value output = r.newComputeCell1(input, (x) => x + 1);
 
   variable Integer[] vals1 = [];
@@ -130,7 +130,7 @@ void removingCallbackMultipleTimesDoesntInterfereWithOtherCallbacks() {
 test
 void callbacksAreOnlyCalledOnceEvenIfMultipleDependenciesChange() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value plusOne = r.newComputeCell1(input, (x) => x + 1);
   value minusOne1 = r.newComputeCell1(input, (x) => x - 1);
   value minusOne2 = r.newComputeCell1(minusOne1, (x) => x - 1);
@@ -146,7 +146,7 @@ void callbacksAreOnlyCalledOnceEvenIfMultipleDependenciesChange() {
 test
 void callbacksAreNotCalledIfDependenciesChangeButOutputValueDoesntChange() {
   value r = Reactor<Integer>();
-  value input = r.newInputCell(1);
+  value input = r.InputCell(1);
   value plusOne = r.newComputeCell1(input, (x) => x + 1);
   value minusOne = r.newComputeCell1(input, (x) => x - 1);
   value alwaysTwo = r.newComputeCell2(plusOne, minusOne, (x, y) => x - y);

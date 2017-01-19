@@ -7,10 +7,6 @@ class Reactor<Element>() given Element satisfies Object {
     shared actual variable Element currentValue = nothing;
   }
 
-  shared InputCell newInputCell(Element initialValue) {
-    return nothing;
-  }
-
   shared class ComputeCell() extends Cell() {
     shared alias Callback => Anything(Element);
 
