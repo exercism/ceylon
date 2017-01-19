@@ -7,7 +7,13 @@ class Reactor<Element>() given Element satisfies Object {
     shared actual variable Element currentValue = nothing;
   }
 
-  shared class ComputeCell() extends Cell() {
+  shared class ComputeCell extends Cell {
+    shared new single(Cell c, Element(Element) f) extends Cell() {
+    }
+
+    shared new double(Cell c1, Cell c2, Element(Element, Element) f) extends Cell() {
+    }
+
     shared alias Callback => Anything(Element);
 
     shared actual Element currentValue = nothing;
@@ -19,13 +25,5 @@ class Reactor<Element>() given Element satisfies Object {
     shared Subscription addCallback(Callback f) {
       return nothing;
     }
-  }
-
-  shared ComputeCell newComputeCell1(Cell c, Element(Element) f) {
-    return nothing;
-  }
-
-  shared ComputeCell newComputeCell2(Cell c1, Cell c2, Element(Element, Element) f) {
-    return nothing;
   }
 }
