@@ -7,4 +7,5 @@ install:
   - sdk install ceylon
 script:
   - bin/configlet .
+  - bin/compile-all-stubs
   - bin/test-all-exercises
