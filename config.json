@@ -12,6 +12,14 @@
       ]
     },
     {
+      "slug": "hamming",
+      "difficulty": 2,
+      "topics": [
+        "Strings",
+        "Filtering"
+      ]
+    },
+    {
       "slug": "sieve",
       "difficulty": 3,
       "topics": [
