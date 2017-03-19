@@ -1,8 +1,8 @@
 # xceylon
 
-Exercism problems in Ceylon.
-
 [![Build Status](https://travis-ci.org/exercism/xceylon.svg?branch=master)](https://travis-ci.org/exercism/xceylon)
+
+Exercism problems in Ceylon.
 
 ## Contributing Guide
 
