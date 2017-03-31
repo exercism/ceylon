@@ -141,7 +141,7 @@ As mentioned above, we used parameterized tests since this avoids test code dupl
 
 Unfortunately, since by default all cases are enabled, this runs counter to the usual Exercism style in which only a *single test case* is enabled, and the student enables one more test case after making the previous one pass, taking an iterative process.
 
-The [ignore annotation](https://modules.ceylon-lang.org/repo/1/ceylon/test/1.3.1/module-doc/api/index.html#ignore) does not seem like it can be applied to individual cases of a parameterized test.
+The [ignore annotation](https://modules.ceylon-lang.org/repo/1/ceylon/test/1.3.2/module-doc/api/index.html#ignore) does not seem like it can be applied to individual cases of a parameterized test.
 
 One possible solution to this would be to comment out all cases except the first.
 If this solution were taken, students would need to be aware of this, and be informed that they need to uncomment the cases.
