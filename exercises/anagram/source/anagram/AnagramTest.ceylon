@@ -1,5 +1,6 @@
 import ceylon.test { ... }
 
+// Tests adapted from x-common version 1.0.1
 {[String, {String*}, {String*}]*} cases => {
   // no matches
   ["diaper", {"hello", "world", "zombies", "pants"}, {}],
@@ -7,13 +8,13 @@ import ceylon.test { ... }
   ["ant", {"tan", "stand", "at"}, {"tan"}],
   // does not detect false positives
   ["galea", {"eagle"}, {}],
-  // detects multiple anagrams
+  // detects two anagrams
   ["master", {"stream", "pigeon", "maters"}, {"stream", "maters"}],
   // does not detect anagram subsets
   ["good", {"dog", "goody"}, {}],
   // detects anagram
   ["listen", {"enlists", "google", "inlets", "banana"}, {"inlets"}],
-  // detects multiple anagrams
+  // detects three anagrams
   [
     "allergy",
     {"gallery", "ballerina", "regally", "clergy", "largely", "leading"},
