@@ -1,5 +1,7 @@
 import ceylon.test { ... }
 
+// Tests adapted from x-common version 1.0.0
+
 test
 void inputCellsHaveValue() {
   value r = Reactor<Integer>();

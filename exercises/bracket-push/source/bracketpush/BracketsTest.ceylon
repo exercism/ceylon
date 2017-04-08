@@ -1,5 +1,6 @@
 import ceylon.test { ... }
 
+// Tests adapted from x-common version 1.0.0
 {[String, Boolean]*} cases => {
   // paired square brackets
   ["[]", true],

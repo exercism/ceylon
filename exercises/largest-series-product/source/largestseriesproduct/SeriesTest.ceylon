@@ -1,5 +1,6 @@
 import ceylon.test { ... }
 
+// Tests adapted from x-common version 1.0.0
 {[String, Integer, Integer?]*} cases => {
   ["29", 2, 18],
   ["0123456789", 2, 72],
