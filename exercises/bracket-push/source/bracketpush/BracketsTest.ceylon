@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-// Tests adapted from x-common version 1.0.0
+// Tests adapted from x-common version 1.1.0
 {[String, Boolean]*} cases => {
   // paired square brackets
   ["[]", true],
@@ -10,6 +10,8 @@ import ceylon.test { ... }
   ["[[", false],
   // wrong ordered brackets
   ["}{", false],
+  // wrong closing bracket
+  ["{]", false],
   // paired with whitespace
   ["{ }", true],
   // simple nested brackets
