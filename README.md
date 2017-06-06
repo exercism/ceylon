@@ -13,7 +13,7 @@ You can just ask in the [Exercism Gitter support](https://gitter.im/exercism/sup
 
 ### How to contribute
 
-The Exercism-wide [contributing guide](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md) covers topics relevant to contributing to the entire Exercism project, including but not limited to the Ceylon track.
+The Exercism-wide [contributing guide](https://github.com/exercism/docs/tree/master/contributing-to-language-tracks) covers topics relevant to contributing to the entire Exercism project, including but not limited to the Ceylon track.
 
 * To report a bug or ask a question, [create an issue](https://help.github.com/articles/creating-an-issue/).
 * If you already have a fix for a bug, you could [create a pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
