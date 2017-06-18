@@ -1,6 +1,6 @@
-# xceylon
+# Exercism Ceylon Track
 
-[![Build Status](https://travis-ci.org/exercism/xceylon.svg?branch=master)](https://travis-ci.org/exercism/xceylon)
+[![Build Status](https://travis-ci.org/exercism/ceylon.svg?branch=master)](https://travis-ci.org/exercism/ceylon)
 
 Exercism problems in Ceylon.
 
@@ -9,7 +9,7 @@ Exercism problems in Ceylon.
 ### Asking for help
 
 If you're ever unsure about how to help, don't worry!
-You can just ask in the [Exercism Gitter support](https://gitter.im/exercism/support) channel or by creating an issue [for the Ceylon track](https://github.com/exercism/xceylon/issues/new) and we are happy to help you!
+You can just ask in the [Exercism Gitter support](https://gitter.im/exercism/support) channel or by creating an issue [for the Ceylon track](https://github.com/exercism/ceylon/issues/new) and we are happy to help you!
 
 ### How to contribute
 
@@ -70,7 +70,7 @@ However, if there is any Ceylon-specific information that you would like appende
 
 ### Running the tests
 
-As mentioned, [Travis CI](https://travis-ci.org/exercism/xceylon) runs our tests to ensure that our exercises are solvable.
+As mentioned, [Travis CI](https://travis-ci.org/exercism/ceylon) runs our tests to ensure that our exercises are solvable.
 The tests are run on all pull requests (PRs), and we should strive to only merge PRs for which the tests are passing.
 
 It is possible to run these tests locally as well.
