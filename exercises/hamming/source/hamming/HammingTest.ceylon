@@ -5,6 +5,8 @@ import ceylon.test {
 // Tests adapted from problem-specifications version 2.2.0
 
 {[String, String, Integer?]*} cases => {
+    // empty strands
+    ["", "", 0],
     // single letter identical strands
     ["A", "A", 0],
     // single letter different strands
@@ -13,8 +15,6 @@ import ceylon.test {
     ["GGACTGAAATCTG", "GGACTGAAATCTG", 0],
     // long different strands
     ["GGACGGATTCTG", "AGGACGGATTCT", 9],
-    // empty strands
-    ["", "", 0],
     // disallow first strand longer
     ["AATG", "AAA", null],
     // disallow second strand longer
