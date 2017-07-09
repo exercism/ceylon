@@ -6,6 +6,6 @@ install:
   - source $HOME/.sdkman/bin/sdkman-init.sh
   - sdk install ceylon
 script:
-  - bin/configlet .
+  - bin/configlet lint .
   - bin/compile-all-stubs
   - bin/test-all-exercises
