@@ -5,14 +5,20 @@
   "active": false,
   "exercises": [
     {
+      "uuid": "9ae32021-a7c3-4ddf-88b1-629b708b9cb9",
       "slug": "leap",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "Integers"
       ]
     },
     {
+      "uuid": "a93dbf6e-c65d-4793-9407-f8187abd0ad7",
       "slug": "hamming",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 2,
       "topics": [
         "Strings",
@@ -20,7 +26,10 @@
       ]
     },
     {
+      "uuid": "bc986de4-f76f-4435-b7aa-08e561693c49",
       "slug": "sieve",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 3,
       "topics": [
         "Filtering",
@@ -28,7 +37,10 @@
       ]
     },
     {
+      "uuid": "fe43a5a0-9f83-45ab-af37-76f8a3e84393",
       "slug": "anagram",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "Strings",
@@ -36,7 +48,10 @@
       ]
     },
     {
+      "uuid": "0112a648-dca1-425d-9c1c-67fc6e6247a7",
       "slug": "largest-series-product",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "Strings",
@@ -45,7 +60,10 @@
       ]
     },
     {
+      "uuid": "6b95f859-3395-4936-bbc3-601041b6744b",
       "slug": "bracket-push",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 6,
       "topics": [
         "Parsing",
@@ -54,7 +72,10 @@
       ]
     },
     {
+      "uuid": "94e3684c-3646-42ea-909c-c1f9daab552a",
       "slug": "react",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 10,
       "topics": [
         "Reactive programming",
@@ -64,9 +85,6 @@
         "Callable"
       ]
     }
-  ],
-  "deprecated": [
-
   ],
   "foregone": [
 
