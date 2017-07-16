@@ -28,7 +28,7 @@ Depending on what your contribution deals with, you may have to direct it at a c
 
 The Exercism site provides a list of [exercises not on the Ceylon track](http://exercism.io/languages/ceylon/todo).
 A possible contribution would be to choose one of these exercises and add it to this track.
-The common contributing guide has a [section on porting an exercise](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#porting-an-exercise-to-another-language-track).
+The common contributing guide has a [section on porting an exercise](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#porting-an-exercise-to-another-language-track).
 
 Note that you will need to add the problem to the `exercises` section in `config.json` as well, otherwise it will not be available via `exercism fetch` (or any other means, other than by cloning the repository).
 
