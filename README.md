@@ -50,7 +50,7 @@ This directory should contain the following files and directories, where `<slug>
   * This file provides just the type signatures needed to make the tests compile.
   * The implementations for all functions should all be `return nothing;`, which will intentionally fail the tests.
 * `source/<slug>/<Slug>Test.ceylon`: The test file.
-  * If there is an `exercises/<slug>/canonical-data.json` in the `problem-specifications` repository, the test cases should typically be those described in that file.
+  * If there is an `exercises/<slug>/canonical-data.json` in the [`problem-specifications` repository](https://github.com/exercism/problem-specifications), the test cases should typically be those described in that file.
   * If you believe a case should be added or removed, try discussing it in the `problem-specifications` repository to see if it would apply to all tracks.
   * If a modification to the cases only makes sense for the Ceylon track, please note the change in the test file.
   * If no JSON file is present, you may use the same tests as other languages implementing that exercise.
