@@ -20,15 +20,15 @@ The Exercism-wide [contributing guide](https://github.com/exercism/docs/tree/mas
 
 Depending on what your contribution deals with, you may have to direct it at a certain repository:
 
-* If your contribution deals with the README for a problem, it should go to [x-common](https://github.com/exercism/x-common).
+* If your contribution deals with the README for a problem, it should go to [problem-specifications](https://github.com/exercism/problem-specifications).
 * Otherwise, it probably deals with matters specific to the Ceylon track, in which case it goes to this repository.
-* If you're not sure, you can try here and we will let you know if it should go in x-common.
+* If you're not sure, you can try here and we will let you know if it should go in problem-specifications.
 
 #### Porting an exercise
 
 The Exercism site provides a list of [exercises not on the Ceylon track](http://exercism.io/languages/ceylon/todo).
 A possible contribution would be to choose one of these exercises and add it to this track.
-The common contributing guide has a [section on porting an exercise](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#porting-an-exercise-to-another-language-track).
+The Exercism documentation repo has a [guide on porting an exercise](https://github.com/exercism/docs/blob/master/you-can-help/implement-an-exercise-from-specification.md).
 
 Note that you will need to add the problem to the `exercises` section in `config.json` as well, otherwise it will not be available via `exercism fetch` (or any other means, other than by cloning the repository).
 
@@ -50,8 +50,8 @@ This directory should contain the following files and directories, where `<slug>
   * This file provides just the type signatures needed to make the tests compile.
   * The implementations for all functions should all be `return nothing;`, which will intentionally fail the tests.
 * `source/<slug>/<Slug>Test.ceylon`: The test file.
-  * If there is an `exercises/<slug>/canonical-data.json` in the `x-common` repository, the test cases should typically be those described in that file.
-  * If you believe a case should be added or removed, try discussing it in the `x-common` repository to see if it would apply to all tracks.
+  * If there is an `exercises/<slug>/canonical-data.json` in the [`problem-specifications` repository](https://github.com/exercism/problem-specifications), the test cases should typically be those described in that file.
+  * If you believe a case should be added or removed, try discussing it in the `problem-specifications` repository to see if it would apply to all tracks.
   * If a modification to the cases only makes sense for the Ceylon track, please note the change in the test file.
   * If no JSON file is present, you may use the same tests as other languages implementing that exercise.
   * Typically, we like to use [parameterized tests](https://ceylon-lang.org/blog/2016/02/22/ceylon-test-new-and-noteworthy/#parameterized_tests) to express the tests with minimal duplication in test code.
@@ -65,7 +65,7 @@ This directory should contain the following files and directories, where `<slug>
 * *optional*: `example/*.ceylon`
   * Other files may be included in the `example/` directory if appropriate.
 
-As a reminder, the README does not need to be added to this track - it is automatically created using the data in [x-common](https://github.com/exercism/x-common).
+As a reminder, the README does not need to be added to this track - it is automatically created using the data in [problem-specifications](https://github.com/exercism/problem-specifications).
 However, if there is any Ceylon-specific information that you would like appended to the README, place this in a `HINTS.md` file in the exercise directory (`exercises/<slug>/HINTS.md`).
 
 ### Running the tests
