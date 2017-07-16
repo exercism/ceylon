@@ -41,6 +41,9 @@ For the Ceylon track, the files needed to port an exercise are described in the 
 Each exercise is located in the `exercises` directory, in a directory with the same name as its slug (the `leap` exercise will be at `exercises/leap`, etc.).
 This directory should contain the following files and directories, where `<slug>` is the slug of the exercise with all hyphens deleted, and `<Slug>` is the CamelCased version:
 
+* `README.md`: The README for the exercise. This is [generated](https://github.com/exercism/docs/blob/master/language-tracks/exercises/anatomy/readmes.md) from the [problem-specifications](https://github.com/exercism/problem-specifications) repository then committed to the Ceylon track repository.
+  * If there is Ceylon-specific information that should be appended to the Exercism-wide description from the problem-specifications repository, place these in a `.meta/hints.md` file in the exercise directory.
+  * If the Exercism-wide description from the problem-specifications repository is completely unsuitable for the Ceylon track, override the template with a `.meta/readme.go.tmpl` in the exercise directory.
 * `source/<slug>/module.ceylon`: the [module descriptor](https://ceylon-lang.org/documentation/tour/modules/#dependencies_and_module_descriptors).
   * This file declares the module and any dependencies.
   * Typically, the only dependency will be on [`ceylon.test`](https://herd.ceylon-lang.org/modules/ceylon.test) at the current Ceylon version.
@@ -64,9 +67,6 @@ This directory should contain the following files and directories, where `<slug>
   * We may consider adding external dependencies for an example solution if the exercise would be unnecessarily difficult and/or cumbersome without those particular dependencies.
 * *optional*: `example/*.ceylon`
   * Other files may be included in the `example/` directory if appropriate.
-
-As a reminder, the README does not need to be added to this track - it is automatically created using the data in [problem-specifications](https://github.com/exercism/problem-specifications).
-However, if there is any Ceylon-specific information that you would like appended to the README, place this in a `HINTS.md` file in the exercise directory (`exercises/<slug>/HINTS.md`).
 
 ### Running the tests
 
