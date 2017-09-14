@@ -35,6 +35,18 @@
       ]
     },
     {
+      "uuid": "bc986de4-62f7-439a-a144-fb8fdbdf4d30",
+      "slug": "rna-transcription",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "Strings",
+        "Parsing",
+        "Transforming"
+      ]
+    },
+    {
       "uuid": "fe43a5a0-9f83-45ab-af37-76f8a3e84393",
       "slug": "anagram",
       "core": false,
