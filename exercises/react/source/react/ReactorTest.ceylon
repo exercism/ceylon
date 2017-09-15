@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-// Tests adapted from x-common version 1.0.0
+// Tests adapted from problem-specifications version 1.0.0
 
 test
 void inputCellsHaveValue() {
