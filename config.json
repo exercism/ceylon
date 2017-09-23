@@ -1,4 +1,6 @@
 {
+  "this_is_invalid_json": true
+  {
   "language": "Ceylon",
   "active": false,
   "exercises": [
