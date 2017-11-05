@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-// Tests adapted from problem-specifications version 2.0.0
+// Tests adapted from problem-specifications version 2.0.1
 {[String, String, Integer?]*} cases => {
   // identical strands
   ["A", "A", 0],
@@ -17,9 +17,9 @@ import ceylon.test { ... }
   // small distance in long strands
   ["ACCAGGG", "ACTATGG", 2],
   // non-unique character in first strand
-  ["AGA", "AGG", 1],
+  ["AAG", "AAA", 1],
   // non-unique character in second strand
-  ["AGG", "AGA", 1],
+  ["AAA", "AAG", 1],
   // same nucleotides in different positions
   ["TAG", "GAT", 2],
   // large distance
