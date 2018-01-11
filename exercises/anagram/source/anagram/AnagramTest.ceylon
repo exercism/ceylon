@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-// Tests adapted from problem-specifications version 1.0.1
+// Tests adapted from problem-specifications version 1.1.0
 {[String, {String*}, {String*}]*} cases => {
   // no matches
   ["diaper", {"hello", "world", "zombies", "pants"}, {}],

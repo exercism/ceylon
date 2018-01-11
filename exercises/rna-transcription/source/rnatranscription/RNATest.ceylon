@@ -1,6 +1,7 @@
 import ceylon.test { ... }
 
-// Tests adapted from problem-specifications version 1.0.1
+// Tests adapted from problem-specifications version 1.1.0
+// The Ceylon track keeps the Error cases from 1.0.1 (removed in 1.1.0)
 {[String, String|Null]*} cases => {
   // empty strand
   ["",                         ""],
