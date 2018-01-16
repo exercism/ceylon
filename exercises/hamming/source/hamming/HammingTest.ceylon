@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-// Tests adapted from problem-specifications version 2.0.1
+// Tests adapted from problem-specifications version 2.1.0
 {[String, String, Integer?]*} cases => {
   // identical strands
   ["A", "A", 0],
