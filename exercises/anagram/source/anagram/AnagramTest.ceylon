@@ -1,13 +1,9 @@
 import ceylon.test { ... }
 
-// Tests adapted from problem-specifications version 1.1.0
+// Tests adapted from problem-specifications version 1.2.0
 {[String, {String*}, {String*}]*} cases => {
   // no matches
   ["diaper", {"hello", "world", "zombies", "pants"}, {}],
-  // detects simple anagram
-  ["ant", {"tan", "stand", "at"}, {"tan"}],
-  // does not detect false positives
-  ["galea", {"eagle"}, {}],
   // detects two anagrams
   ["master", {"stream", "pigeon", "maters"}, {"stream", "maters"}],
   // does not detect anagram subsets
@@ -20,8 +16,6 @@ import ceylon.test { ... }
     {"gallery", "ballerina", "regally", "clergy", "largely", "leading"},
     {"gallery", "regally", "largely"}
   ],
-  // does not detect identical words
-  ["corn", {"corn", "dark", "Corn", "rank", "CORN", "cron", "park"}, {"cron"}],
   // does not detect non-anagrams with identical checksum
   ["mass", {"last"}, {}],
   // detects anagrams case-insensitively
@@ -30,8 +24,6 @@ import ceylon.test { ... }
   ["Orchestra", {"cashregister", "carthorse", "radishes"}, {"carthorse"}],
   // detects anagrams using case-insensitive possible matches
   ["orchestra", {"cashregister", "Carthorse", "radishes"}, {"Carthorse"}],
-  // does not detect a word as its own anagram
-  ["banana", {"Banana"}, {}],
   // does not detect a anagram if the original word is repeated
   ["go", {"go Go GO"}, {}],
   // anagrams must use all letters exactly once
