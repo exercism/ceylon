@@ -1,6 +1,6 @@
 import ceylon.test { ... }
 
-// Tests adapted from problem-specifications version 1.1.0
+// Tests adapted from problem-specifications version 1.2.0
 
 test
 void inputCellsHaveValue() {
@@ -83,6 +83,22 @@ void callbacksOnlyFireOnChange() {
 
   input.currentValue = 4;
   assertEquals(vals, [222]);
+}
+
+test
+void callbacksCanBeCalledMultipleTimes() {
+  value r = Reactor<Integer>();
+  value input = r.InputCell(1);
+  value output = r.ComputeCell.single(input, (Integer x) => x + 1);
+
+  variable Integer[] vals = [];
+  output.addCallback((x) => vals = vals.withTrailing(x));
+
+  input.currentValue = 2;
+  assertEquals(vals, [3]);
+
+  input.currentValue = 3;
+  assertEquals(vals, [3, 4]);
 }
 
 test
