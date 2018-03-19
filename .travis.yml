@@ -9,3 +9,12 @@ script:
   - bin/configlet lint .
   - bin/compile-all-stubs
   - bin/test-all-exercises
+  - |
+    if ! ceylon format exercises; then
+      echo "'ceylon format' couldn't run!"
+      exit 1
+    fi
+    if ! git diff --exit-code; then
+      echo "'ceylon format' found differences! Please match 'ceylon format' so this repo can have consistent style!"
+      exit 1
+    fi

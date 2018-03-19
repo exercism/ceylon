@@ -92,13 +92,12 @@ But the rationale behind the current choices made will be noted here.
 
 #### Style
 
-At the time of writing, the current maintainer of the Ceylon track was not able to find any commonly-accepted style guide for Ceylon.
-Nor did the maintainer find automatic linter or formatter.
-Thus, the maintainer was forced to just figure one out and try to be consistent.
-For example, all indents are two spaces because that's the default in the maintainer's editor.
+This repository uses `ceylon format`:
+https://github.com/eclipse/ceylon.formatter.
 
-The maintainer is not intent on any particular style as long as all the code in the repository is consistent.
-If in the future there happened to be a widely-accepted style guide and/or an automatic formatter, the maintainer would not be opposed to reformatting all code in this repository to comply.
+This should be automatically installed with `ceylon` (it was known to be installed with SDKMan as of Ceylon 1.3.3).
+
+CI will ensure that code follows `ceylon format`.
 
 #### Idiomatic Ceylon
 
