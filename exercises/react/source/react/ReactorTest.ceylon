@@ -116,6 +116,9 @@ void callbacksCanBeAddedAndRemoved() {
     
     input.currentValue = 31;
     
+    assertEquals(vals1, [32]);
+    assertEquals(vals2, [32]);
+    
     sub1.cancel();
     variable Integer[] vals3 = [];
     output.addCallback((x) => vals3 = vals3.withTrailing(x));
