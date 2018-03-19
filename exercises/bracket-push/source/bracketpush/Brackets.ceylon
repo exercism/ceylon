@@ -1,3 +1,3 @@
 Boolean balanced(String brackets) {
-  return nothing;
+    return nothing;
 }
