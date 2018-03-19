@@ -9,5 +9,7 @@ String|Error transcription(String dna) {
                         case ('C') r + "G"
                         case ('T') r + "A"
                         case ('A') r + "U"
-                        else (Error())));
+                        else (Error())
+                )
+    );
 }
