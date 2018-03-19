@@ -1,3 +1,3 @@
 {Integer*} primesUpTo(Integer max) {
-  return nothing;
+    return nothing;
 }
