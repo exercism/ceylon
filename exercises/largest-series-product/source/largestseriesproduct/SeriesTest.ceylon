@@ -4,7 +4,7 @@ import ceylon.test {
 
 // Tests adapted from problem-specifications version 1.1.0
 
-{[String, Integer, Integer?]*} cases => {
+{[String, Integer, Integer|Error]*} cases => {
     // finds the largest product if span equals length
     ["29", 2, 18],
     // can find the largest product of 2 with numbers in order
@@ -24,26 +24,21 @@ import ceylon.test {
     // reports zero if all spans include zero
     ["99099", 3, 0],
     // rejects span longer than string length
-    ["123", 4, null],
+    ["123", 4, InvalidWindowSize()],
     // reports 1 for empty string and empty product (0 span)
     ["", 0, 1],
     // reports 1 for nonempty string and empty product (0 span)
     ["123", 0, 1],
     // rejects empty string and nonzero span
-    ["", 1, null],
+    ["", 1, InvalidWindowSize()],
     // rejects invalid character in digits
-    ["1234a5", 2, null],
+    ["1234a5", 2, InvalidDigit('a')],
     // rejects negative span
-    ["12345", -1, null]
+    ["12345", -1, InvalidWindowSize()]
 };
 
 test
 parameters (`value cases`)
-void testLargestProduct(String digits, Integer window, Integer? expected) {
-    value result = largestProduct(digits, window);
-    if (exists expected) {
-        assertEquals(result, expected);
-    } else if (!is Error result) {
-        fail("should have errored, but got ``result``");
-    }
+void testLargestProduct(String digits, Integer window, Integer|Error expected) {
+    assertEquals(largestProduct(digits, window), expected);
 }
