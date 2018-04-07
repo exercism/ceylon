@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.2.0
+// Tests adapted from problem-specifications version 1.3.0
 
 {[String, Boolean]*} cases => {
     // paired square brackets
@@ -17,6 +17,8 @@ import ceylon.test {
     ["{]", false],
     // paired with whitespace
     ["{ }", true],
+    // partially paired brackets
+    ["{[])", false],
     // simple nested brackets
     ["{[]}", true],
     // several paired brackets
