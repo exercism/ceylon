@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.2.0
+// Tests adapted from problem-specifications version 2.0.0
 
 test
 void inputCellsHaveValue() {
@@ -101,6 +101,24 @@ void callbacksCanBeCalledMultipleTimes() {
     
     input.currentValue = 3;
     assertEquals(vals, [3, 4]);
+}
+
+test
+void callbacksCanFireFromMultipleCells() {
+    value r = Reactor<Integer>();
+    value input = r.InputCell(1);
+    value plusOne = r.ComputeCell.single(input, (Integer x) => x + 1);
+    value minusOne = r.ComputeCell.single(input, (Integer x) => x - 1);
+    
+    variable Integer[] plusVals = [];
+    plusOne.addCallback((x) => plusVals = plusVals.withTrailing(x));
+    
+    variable Integer[] minusVals = [];
+    minusOne.addCallback((x) => minusVals = minusVals.withTrailing(x));
+    
+    input.currentValue = 10;
+    assertEquals(plusVals, [11]);
+    assertEquals(minusVals, [9]);
 }
 
 test
