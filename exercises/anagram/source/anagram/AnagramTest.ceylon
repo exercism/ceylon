@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.2.0
+// Tests adapted from problem-specifications version 1.4.0
 
 {[String, {String*}, {String*}]*} cases => {
     // no matches
@@ -31,8 +31,8 @@ import ceylon.test {
     ["go", { "go Go GO" }, {}],
     // anagrams must use all letters exactly once
     ["tapper", { "patter" }, {}],
-    // capital word is not own anagram
-    ["BANANA", { "Banana" }, {}]
+    // words are not anagrams of themselves (case-insensitive)
+    ["BANANA", { "BANANA", "Banana", "banana" }, {}]
 };
 
 test

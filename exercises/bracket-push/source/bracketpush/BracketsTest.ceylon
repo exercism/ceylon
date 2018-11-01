@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.3.0
+// Tests adapted from problem-specifications version 1.4.0
 
 {[String, Boolean]*} cases => {
     // paired square brackets
@@ -31,6 +31,8 @@ import ceylon.test {
     ["([{])", false],
     // paired and wrong nested brackets
     ["[({]})", false],
+    // paired and incomplete brackets
+    ["{}[", false],
     // math expression
     ["(((185 + 223.85) * 15) - 543)/2", true],
     // complex latex expression
