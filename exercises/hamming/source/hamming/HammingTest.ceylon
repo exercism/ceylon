@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 2.1.0
+// Tests adapted from problem-specifications version 2.1.1
 
 {[String, String, Integer?]*} cases => {
     // identical strands
