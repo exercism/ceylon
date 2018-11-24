@@ -13,7 +13,7 @@ install:
     #     redhat.ceylon.cmr.ceylon.loader.ModuleNotFoundException: Could not find module:
     #     javax.xml/7
     # Try later version of Java when using a later version of Cyelon.
-  - sdk install java 8.0.181-zulu
+  - sdk install java $(sdk list java | grep '^ *8\..*zulu' | head -1)
   - sdk install ceylon
 script:
   - bin/configlet lint .
