@@ -9,7 +9,10 @@ jdk:
   #     javax.xml/7
   # Try later version of Java when using a later version of Ceylon.
   # Arbitrarily selected openjdk8 over oraclejdk8, they both work fine.
-  - openjdk8
+  - openjdk9
+  - openjdk10
+  - openjdk11
+  - openjdk12
 install:
   - bin/fetch-configlet
   - curl -s https://get.sdkman.io | bash
