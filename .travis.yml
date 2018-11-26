@@ -1,19 +1,19 @@
-language: bash
-
+language: java
+jdk:
+  # Ceylon 1.3.3 is not ready for java 10 or 11:
+  #     ceylon compile: invalid source release: 10
+  #     ceylon compile: invalid source release: 11
+  # Ceylon 1.3.3 is not ready for java 9:
+  #     ceylon format: Could not load module 'ceylon.formatter/1.3.3' because: com.
+  #     redhat.ceylon.cmr.ceylon.loader.ModuleNotFoundException: Could not find module:
+  #     javax.xml/7
+  # Try later version of Java when using a later version of Ceylon.
+  # Arbitrarily selected openjdk8 over oraclejdk8, they both work fine.
+  - openjdk8
 install:
   - bin/fetch-configlet
   - curl -s https://get.sdkman.io | bash
   - source $HOME/.sdkman/bin/sdkman-init.sh
-  - sdk list java
-    # Ceylon 1.3.3 is not ready for java 10 or 11:
-    #     ceylon compile: invalid source release: 10
-    #     ceylon compile: invalid source release: 11
-    # Ceylon 1.3.3 is not ready for java 9:
-    #     ceylon format: Could not load module 'ceylon.formatter/1.3.3' because: com.
-    #     redhat.ceylon.cmr.ceylon.loader.ModuleNotFoundException: Could not find module:
-    #     javax.xml/7
-    # Try later version of Java when using a later version of Cyelon.
-  - sdk install java $(sdk list java | grep '^ *8\..*zulu' | head -1)
   - sdk install ceylon
 script:
   - bin/configlet lint .
