@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 2.2.0
+// Tests adapted from problem-specifications version 2.3.0
 
 {[String, String, Integer?]*} cases => {
     // empty strands
@@ -18,7 +18,11 @@ import ceylon.test {
     // disallow first strand longer
     ["AATG", "AAA", null],
     // disallow second strand longer
-    ["ATA", "AGTG", null]
+    ["ATA", "AGTG", null],
+    // disallow left empty strand
+    ["", "G", null],
+    // disallow right empty strand
+    ["G", "", null]
 };
 
 test
