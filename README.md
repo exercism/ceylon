@@ -147,5 +147,3 @@ If this solution were taken, students would need to be aware of this, and be inf
 The Travis CI run would need to uncomment the cases as well (without uncommenting any actual comments, which would probably cause syntax errors!).
 
 The current maintainer does not have a good solution to this, so ideas here are welcome.
-
-
