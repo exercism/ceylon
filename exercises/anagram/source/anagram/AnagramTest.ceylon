@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.4.0
+// Tests adapted from problem-specifications version 1.4.1
 
 {[String, {String*}, {String*}]*} cases => {
     // no matches
@@ -27,7 +27,7 @@ import ceylon.test {
     ["Orchestra", { "cashregister", "carthorse", "radishes" }, { "carthorse" }],
     // detects anagrams using case-insensitive possible matches
     ["orchestra", { "cashregister", "Carthorse", "radishes" }, { "Carthorse" }],
-    // does not detect a anagram if the original word is repeated
+    // does not detect an anagram if the original word is repeated
     ["go", { "go Go GO" }, {}],
     // anagrams must use all letters exactly once
     ["tapper", { "patter" }, {}],
