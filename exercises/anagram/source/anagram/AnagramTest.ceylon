@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.4.1
+// Tests adapted from problem-specifications version 1.5.0
 
 {[String, {String*}, {String*}]*} cases => {
     // no matches
@@ -19,6 +19,8 @@ import ceylon.test {
         { "gallery", "ballerina", "regally", "clergy", "largely", "leading" },
         { "gallery", "regally", "largely" }
     ],
+    // detects multiple anagrams with different case
+    ["nose", { "Eons", "ONES" }, { "Eons", "ONES" }],
     // does not detect non-anagrams with identical checksum
     ["mass", { "last" }, {}],
     // detects anagrams case-insensitively
@@ -32,7 +34,9 @@ import ceylon.test {
     // anagrams must use all letters exactly once
     ["tapper", { "patter" }, {}],
     // words are not anagrams of themselves (case-insensitive)
-    ["BANANA", { "BANANA", "Banana", "banana" }, {}]
+    ["BANANA", { "BANANA", "Banana", "banana" }, {}],
+    // words other than themselves can be anagrams
+    ["LISTEN", { "Listen", "Silent", "LISTEN" }, { "Silent" }]
 };
 
 test
