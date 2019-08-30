@@ -5,7 +5,7 @@
   "exercises": [
     {
       "slug": "leap",
-      "uuid": "9ae32021-a7c3-4ddf-88b1-629b708b9cb90",
+      "uuid": "9ae32021-a7c3-4ddf-88b1-629b708b9cb9",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
@@ -15,7 +15,7 @@
     },
     {
       "slug": "hamming",
-      "uuid": "a93dbf6e-c65d-4793-9407-f8187abd0ad",
+      "uuid": "a93dbf6e-c65d-4793-9407-f8187abd0ad7",
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
@@ -26,7 +26,7 @@
     },
     {
       "slug": "sieve",
-      "uuid": "bc986de4-f76f-4435-b7aa-08e561693c4g",
+      "uuid": "bc986de4-f76f-4435-b7aa-08e561693c49",
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
