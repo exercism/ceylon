@@ -2,7 +2,7 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.5.0
+// Tests adapted from problem-specifications version 1.5.1
 
 {[Integer, Boolean]*} cases => {
     [2015, false],
