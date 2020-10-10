@@ -2,8 +2,6 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.1.0
-
 {Integer*} cases => { 1, 2, 10, 13, 1000 };
 
 [Integer+] primes1000 = [
