@@ -2,8 +2,6 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 2.3.0
-
 {[String, String, Integer?]*} cases => {
     // empty strands
     ["", "", 0],

@@ -2,8 +2,6 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.2.0
-
 {[String, Integer, Integer|Error]*} cases => {
     // finds the largest product if span equals length
     ["29", 2, 18],

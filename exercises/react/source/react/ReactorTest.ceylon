@@ -2,8 +2,6 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 2.0.0
-
 test
 void inputCellsHaveValue() {
     value r = Reactor<Integer>();

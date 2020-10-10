@@ -2,9 +2,6 @@ import ceylon.test {
     ...
 }
 
-// Tests adapted from problem-specifications version 1.3.0
-// The Ceylon track keeps the Error cases from 1.0.1 (removed in 1.1.0)
-
 {[String, String|Null]*} cases => {
     // empty strand
     ["", ""],
@@ -18,6 +15,8 @@ import ceylon.test {
     ["T", "A"],
     // longer strand
     ["ACGTGGTCTTAA", "UGCACCAGAAUU"],
+    // The Ceylon track keeps these Error cases,
+    // from problem-specifications 1.0.1 (removed in 1.1.0)
     // strand with DNA nucleotides
     ["U", null],
     // strand with invalid nucleotides
