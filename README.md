@@ -1,6 +1,6 @@
 # Exercism Ceylon Track
 
-[![Build Status](https://travis-ci.org/exercism/ceylon.svg?branch=master)](https://travis-ci.org/exercism/ceylon)
+![Tests](https://github.com/exercism/ceylon/workflows/Tests/badge.svg)
 
 Exercism problems in Ceylon.
 
