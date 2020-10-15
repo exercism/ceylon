@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - master
-    - gha
 
 jobs:
   track-config:
