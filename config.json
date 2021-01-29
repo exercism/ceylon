@@ -1,5 +1,6 @@
 {
   "language": "Ceylon",
+  "slug": "ceylon",
   "active": false,
   "status": {
     "concept_exercises": false,
