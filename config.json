@@ -21,6 +21,7 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "9ae32021-a7c3-4ddf-88b1-629b708b9cb9",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
@@ -31,6 +32,7 @@
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "a93dbf6e-c65d-4793-9407-f8187abd0ad7",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
@@ -42,6 +44,7 @@
         "slug": "rna-transcription",
         "name": "Rna Transcription",
         "uuid": "bc986de4-62f7-439a-a144-fb8fdbdf4d30",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
@@ -54,6 +57,7 @@
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "bc986de4-f76f-4435-b7aa-08e561693c49",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
@@ -65,6 +69,7 @@
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "fe43a5a0-9f83-45ab-af37-76f8a3e84393",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
@@ -76,6 +81,7 @@
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "0112a648-dca1-425d-9c1c-67fc6e6247a7",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
@@ -89,6 +95,7 @@
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "6b95f859-3395-4936-bbc3-601041b6744b",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 6,
         "topics": [
@@ -101,6 +108,7 @@
         "slug": "react",
         "name": "React",
         "uuid": "94e3684c-3646-42ea-909c-c1f9daab552a",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 10,
         "topics": [
