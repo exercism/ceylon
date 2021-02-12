@@ -1,3 +1,5 @@
+# About
+
 Ceylon is a general-purpose programming language featuring a syntax similar to Java and C#.
 It is imperative, statically-typed, block-structured, object-oriented, and higher-order.
 By _statically-typed_, we mean that the compiler performs extensive type checking, with

@@ -1,4 +1,4 @@
-## Running Ceylon Tests
+# Running Ceylon Tests
 
 Before tests can be run, your code must be compiled via [`ceylon compile`](https://ceylon-lang.org/documentation/current/reference/tool/ceylon/subcommands/ceylon-compile.html).
 
