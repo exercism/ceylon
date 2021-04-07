@@ -14,6 +14,20 @@
     "indent_style": "space",
     "indent_size": 4
   },
+  "files": {
+    "solution": [
+      "source/%{pascal_slug}.ceylon"
+    ],
+    "test": [
+      "source/%{pascal_slug}Test.ceylon"
+    ],
+    "example": [
+      "example/%{pascal_slug}.ceylon"
+    ],
+    "exemplar": [
+      ".meta/Exemplar.ceylon"
+    ]
+  },
   "exercises": {
     "concept": [],
     "practice": [
