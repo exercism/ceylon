@@ -1,3 +1,5 @@
+# Installation
+
 The easiest way to install Ceylon is simply to **not** install it.
 You should be able to solve most of the exercises using our [web IDE](http://try.ceylon-lang.org/).
 
