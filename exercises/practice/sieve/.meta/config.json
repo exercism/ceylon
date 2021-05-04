@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "source/Sieve.ceylon"
+      "source/sieve/Sieve.ceylon"
     ],
     "test": [
-      "source/SieveTest.ceylon"
+      "source/sieve/SieveTest.ceylon"
     ],
     "example": [
       "example/Sieve.ceylon"

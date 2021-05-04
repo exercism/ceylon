@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "source/Anagram.ceylon"
+      "source/anagram/Anagram.ceylon"
     ],
     "test": [
-      "source/AnagramTest.ceylon"
+      "source/anagram/AnagramTest.ceylon"
     ],
     "example": [
       "example/Anagram.ceylon"
