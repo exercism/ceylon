@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "source/Hamming.ceylon"
+      "source/hamming/Hamming.ceylon"
     ],
     "test": [
-      "source/HammingTest.ceylon"
+      "source/hamming/HammingTest.ceylon"
     ],
     "example": [
       "example/Hamming.ceylon"

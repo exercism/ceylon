@@ -3,13 +3,13 @@
   "authors": [],
   "files": {
     "solution": [
-      "source/LargestSeriesProduct.ceylon"
+      "source/largestseriesproduct/Series.ceylon"
     ],
     "test": [
-      "source/LargestSeriesProductTest.ceylon"
+      "source/largestseriesproduct/SeriesTest.ceylon"
     ],
     "example": [
-      "example/LargestSeriesProduct.ceylon"
+      "example/Series.ceylon"
     ]
   },
   "source": "A variation on Problem 8 at Project Euler",

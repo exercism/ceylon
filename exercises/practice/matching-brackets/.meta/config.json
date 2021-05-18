@@ -3,13 +3,13 @@
   "authors": [],
   "files": {
     "solution": [
-      "source/MatchingBrackets.ceylon"
+      "source/matchingbrackets/Brackets.ceylon"
     ],
     "test": [
-      "source/MatchingBracketsTest.ceylon"
+      "source/matchingbrackets/BracketsTest.ceylon"
     ],
     "example": [
-      "example/MatchingBrackets.ceylon"
+      "example/Brackets.ceylon"
     ]
   },
   "source": "Ginna Baker"

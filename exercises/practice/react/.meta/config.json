@@ -3,13 +3,13 @@
   "authors": [],
   "files": {
     "solution": [
-      "source/React.ceylon"
+      "source/react/Reactor.ceylon"
     ],
     "test": [
-      "source/ReactTest.ceylon"
+      "source/react/ReactorTest.ceylon"
     ],
     "example": [
-      "example/React.ceylon"
+      "example/Reactor.ceylon"
     ]
   }
 }

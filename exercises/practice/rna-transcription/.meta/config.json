@@ -3,13 +3,13 @@
   "authors": [],
   "files": {
     "solution": [
-      "source/RnaTranscription.ceylon"
+      "source/rnatranscription/RNA.ceylon"
     ],
     "test": [
-      "source/RnaTranscriptionTest.ceylon"
+      "source/rnatranscription/RNATest.ceylon"
     ],
     "example": [
-      "example/RnaTranscription.ceylon"
+      "example/RNA.ceylon"
     ]
   },
   "source": "Hyperphysics",
