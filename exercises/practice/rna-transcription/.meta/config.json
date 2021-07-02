@@ -1,6 +1,12 @@
 {
   "blurb": "Given a DNA strand, return its RNA Complement Transcription.",
-  "authors": [],
+  "authors": [
+    "WammKD"
+  ],
+  "contributors": [
+    "petertseng",
+    "rpottsoh"
+  ],
   "files": {
     "solution": [
       "source/rnatranscription/RNA.ceylon"

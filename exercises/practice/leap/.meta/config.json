@@ -1,6 +1,11 @@
 {
   "blurb": "Given a year, report if it is a leap year.",
-  "authors": [],
+  "authors": [
+    "petertseng"
+  ],
+  "contributors": [
+    "sshine"
+  ],
   "files": {
     "solution": [
       "source/Leap.ceylon"
