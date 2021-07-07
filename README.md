@@ -1,6 +1,6 @@
 # Exercism Ceylon Track
 
-![Tests](https://github.com/exercism/ceylon/workflows/Tests/badge.svg)
+[![Tests](https://github.com/exercism/ceylon/workflows/Tests/badge.svg)](https://github.com/exercism/ceylon/actions/workflows/tests.yml)
 
 Exercism problems in Ceylon.
 
