@@ -8,7 +8,7 @@
     "representer": false,
     "analyzer": false
   },
-  "blurb": "",
+  "blurb": "Ceylon is an object-oriented, strongly statically typed programming language with an emphasis on immutability, created by Red Hat. Ceylon programs run on the Java virtual machine (JVM), and could be compiled to JavaScript. The language design focuses on source code readability, predictability, toolability, modularity, and metaprogrammability.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
