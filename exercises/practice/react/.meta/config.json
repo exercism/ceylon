@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement a basic reactive system.",
   "authors": [
     "petertseng"
   ],
@@ -13,5 +12,6 @@
     "example": [
       "example/Reactor.ceylon"
     ]
-  }
+  },
+  "blurb": "Implement a basic reactive system."
 }
