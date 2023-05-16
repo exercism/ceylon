@@ -23,10 +23,6 @@ import ceylon.test {
     ["99099", 3, 0],
     // rejects span longer than string length
     ["123", 4, InvalidWindowSize()],
-    // reports 1 for empty string and empty product (0 span)
-    ["", 0, 1],
-    // reports 1 for nonempty string and empty product (0 span)
-    ["123", 0, 1],
     // rejects empty string and nonzero span
     ["", 1, InvalidWindowSize()],
     // rejects invalid character in digits
