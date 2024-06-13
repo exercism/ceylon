@@ -10,7 +10,7 @@ jobs:
     name: Check track configuration
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Fetch
         run: bin/fetch-configlet
       - name: Lint
@@ -30,7 +30,7 @@ jobs:
     name: Check exercises
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       # It appears that the Ceylon tests work without having to do setup-java.
       # If in the future it breaks, try explicitly adding actions/setup-java@v1.
       # As of Ceylon 1.3.3, I couldn't get Ceylon to work with Java 9, 10, or 11,
