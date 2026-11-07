@@ -1,0 +1,12 @@
+String mostCommonWord(String text) {
+    value counts = HashMap<String, Integer>();
+    variable String best = "";
+    for (word in text.lowercased.split()) {
+        value count = (counts[word] else 0) + 1;
+        counts[word] = count;
+        if (count > (counts[best] else 0)) {
+            best = word;
+        }
+    }
+    return "\"``best``\" appears ``counts[best] else 0`` times";
+}
